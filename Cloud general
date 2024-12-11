@@ -1,0 +1,21 @@
+ 
+The architecture
+  Regions--->Availability Zones--->Data centers.
+  Consider Compliance,price,latency, service avaialibilty before choosing regions.
+AWS service endpoints
+  https://docs.aws.amazon.com/general/latest/gr/rande.html(FIPS with TLS 1.3)
+AWS regional services
+  https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/
+AWS interaction
+  Console, CLI , SDKs
+Shared responsibility
+  https://aws.amazon.com/compliance/shared-responsibility-model/
+
+
+The benifits of cloud computing
+  1.pay as you go
+  2.Benefit from massive economies of scale.
+  3.Stop guessing capacity.
+  4.Increase speed and agility. 
+  5.Stop spending money running and maintaining data centers.
+  6.Go global in minutes.

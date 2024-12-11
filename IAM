@@ -1,0 +1,49 @@
+IAM user
+  console access-->username,password
+  programtic access -->passkey
+IAM group
+  typically add users to group and provide group with permissions.
+    Aim for least priviledge
+  Manage people with idnetity provider
+    https://aws.amazon.com/blogs/security/how-to-create-and-manage-users-within-aws-sso/
+  role based access provides expiring credentials.
+    https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
+IAM policy
+sample policies  
+Admin
+    {
+    
+    "Version": "2012-10-17",    
+    
+         "Statement": [{        
+              "Effect": "Allow",        
+    
+              "Action": "*",        
+    
+              "Resource": "*"     
+    
+         }]
+    
+    }
+Granualar allowing only to change password
+  {"Version": "2012-10-17",    
+
+     "Statement": [{        
+
+          "Effect": "Allow",        
+
+          "Action": [            
+
+               "iam: ChangePassword",            
+
+               "iam: GetUser"            
+
+               ]        
+
+          "Resource": 
+
+"arn:aws:iam::123456789012:user/${aws:username}"    
+
+     }]
+
+}
